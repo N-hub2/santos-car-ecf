@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - Page non trouvée - L'Auto GTA</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#c4abff",
+                    "on-tertiary-fixed-variant": "#47464b",
+                    "surface-bright": "#39393b",
+                    "surface-container": "#201f21",
+                    "on-secondary-fixed": "#23005c",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#00696f",
+                    "surface-dim": "#131315",
+                    "on-error": "#690005",
+                    "background": "#131315",
+                    "tertiary": "#faf6fc",
+                    "primary": "#e1fdff",
+                    "on-secondary-fixed-variant": "#5516be",
+                    "on-secondary": "#3c0091",
+                    "on-tertiary-fixed": "#1b1b1f",
+                    "inverse-surface": "#e5e1e4",
+                    "on-surface-variant": "#b9cacb",
+                    "outline": "#849495",
+                    "on-surface": "#e5e1e4",
+                    "on-primary-fixed": "#002022",
+                    "tertiary-container": "#dddae0",
+                    "inverse-on-surface": "#313032",
+                    "surface-container-low": "#1c1b1d",
+                    "on-tertiary": "#303034",
+                    "surface": "#131315",
+                    "on-background": "#e5e1e4",
+                    "secondary-container": "#571bc1",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#605f64",
+                    "primary-fixed-dim": "#00dbe7",
+                    "secondary-fixed": "#e9ddff",
+                    "on-primary": "#00363a",
+                    "surface-container-lowest": "#0e0e10",
+                    "surface-tint": "#00dbe7",
+                    "primary-fixed": "#74f5ff",
+                    "outline-variant": "#3a494b",
+                    "tertiary-fixed": "#e4e1e7",
+                    "primary-container": "#00f2ff",
+                    "surface-container-highest": "#353437",
+                    "tertiary-fixed-dim": "#c8c5cb",
+                    "secondary": "#d0bcff",
+                    "on-primary-fixed-variant": "#004f54",
+                    "surface-variant": "#353437",
+                    "on-primary-container": "#006a71",
+                    "surface-container-high": "#2a2a2c",
+                    "secondary-fixed-dim": "#d0bcff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "md": "24px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "lg": "40px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom styles that can't be purely done with Tailwind utility classes */
+        .glass-panel {
+            background-color: rgba(26, 26, 30, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+        }
+        
+        .neon-glow-primary {
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+        
+        .neon-glow-primary-hover:hover {
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        /* Glitch effect base */
+        .glitch {
+            position: relative;
+            color: white;
+            z-index: 1;
+        }
+
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ffb4ab;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00f2ff;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(98px, 9999px, 83px, 0); }
+            20% { clip: rect(61px, 9999px, 2px, 0); }
+            40% { clip: rect(8px, 9999px, 81px, 0); }
+            60% { clip: rect(11px, 9999px, 25px, 0); }
+            80% { clip: rect(78px, 9999px, 19px, 0); }
+            100% { clip: rect(8px, 9999px, 42px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(35px, 9999px, 54px, 0); }
+            20% { clip: rect(72px, 9999px, 89px, 0); }
+            40% { clip: rect(10px, 9999px, 22px, 0); }
+            60% { clip: rect(94px, 9999px, 3px, 0); }
+            80% { clip: rect(41px, 9999px, 66px, 0); }
+            100% { clip: rect(25px, 9999px, 87px, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md relative overflow-hidden">
+<!-- Background Atmospheric Effect -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] opacity-50"></div>
+<div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-container/10 rounded-full blur-[100px] opacity-40"></div>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiIvPjwvc3ZnPg==')] opacity-30 mix-blend-overlay"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop relative z-10 w-full h-screen">
+<div class="glass-panel p-xl rounded-xl max-w-2xl w-full text-center flex flex-col items-center justify-center space-y-md neon-glow-primary relative overflow-hidden">
+<!-- Decorative accent line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-70"></div>
+<!-- Glitchy 404 Text -->
+<h1 class="text-[120px] leading-none font-display-lg text-white glitch text-glow tracking-tighter" data-text="404">
+                404
+            </h1>
+<div class="space-y-base z-10">
+<h2 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-on-surface">
+                    Page non disponible
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">
+                    Cette page n'existe pas ou n'est pas nécessaire pour ce projet. Le signal a été perdu dans la matrice.
+                </p>
+</div>
+<div class="pt-lg w-full flex justify-center z-10">
+<a class="group relative inline-flex items-center justify-center px-lg py-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded border border-transparent hover:border-primary-fixed hover:bg-primary-container/90 transition-all duration-300 neon-glow-primary-hover" href="/">
+<span class="material-symbols-outlined mr-sm text-[20px]" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+                    Retour à l'accueil
+                    
+                    <!-- Hover flare effect -->
+<span class="absolute inset-0 w-full h-full bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity rounded"></span>
+</a>
+</div>
+<!-- Subtle decorative elements -->
+<div class="absolute bottom-4 left-4 flex gap-xs opacity-30">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant"></div>
+</div>
+<div class="absolute bottom-4 right-4 text-xs font-mono text-outline opacity-50">
+                ERR_CODE: 0x00404
+            </div>
+</div>
+</main>
+<script>
+        // Simple ambient subtle movement for the glitch text container to make it feel "alive"
+        document.addEventListener('DOMContentLoaded', () => {
+            const panel = document.querySelector('.glass-panel');
+            
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 100;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 100;
+                
+                if(panel) {
+                    panel.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+                    panel.style.transition = 'transform 0.1s ease-out';
+                }
+            });
+
+            // Reset transform when mouse leaves window
+            document.addEventListener('mouseleave', () => {
+                if(panel) {
+                    panel.style.transform = `rotateY(0deg) rotateX(0deg)`;
+                    panel.style.transition = 'transform 0.5s ease-out';
+                }
+            });
+        });
+    </script>
+</body></html>

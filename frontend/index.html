@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santos Car - Catalogue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Santos Car - Accueil">
+      <img class="brand-logo" src="assets/logo.png" alt="Santos Car">
+      <span class="brand-text">Santos Car</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a class="nav-link active" href="index.html">Accueil</a>
+      <a class="nav-link" href="index.html#cars-section" data-scroll-target="cars-section">Voitures</a>
+      <a class="nav-link" href="404.html" title="Page en cours de pr&eacute;paration">Garage</a>
+      <a class="nav-link" href="login.html">Connexion</a>
+      <button class="button primary nav-cta" type="button" data-open-form>Ajouter une voiture</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/hero-gta.png" alt="">
+        <div class="hero-shade"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Santos Car</p>
+        <h1 id="hero-title">Catalogue des voitures Santos Car</h1>
+        <p class="hero-text">D&eacute;couvrez, g&eacute;rez et votez pour vos voitures GTA pr&eacute;f&eacute;r&eacute;es dans une interface simple et immersive.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="index.html#cars-section" data-scroll-target="cars-section">Voir les voitures</a>
+          <a class="button secondary" href="login.html">Connexion</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="message-wrap" aria-live="polite">
+      <p class="message" id="message-box" hidden></p>
+    </section>
+
+    <section class="cars-section" id="cars-section" aria-labelledby="cars-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Garage premium</p>
+          <h2 id="cars-title">Voitures disponibles</h2>
+        </div>
+        <p class="section-note">Cette interface est pr&ecirc;te pour la connexion au backend.</p>
+      </div>
+
+      <div class="cars-list" id="cars-list">
+        <article class="car-card" data-car-card data-name="Cheetah Classic" data-brand="Grotti" data-price="$865,000" data-speed="120 mph" data-votes="42">
+          <div class="car-image">
+            <img src="assets/zentorno.jpg" alt="Cheetah Classic">
+            <span class="speed-chip"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>120 mph</span>
+          </div>
+          <div class="car-body">
+            <p class="car-brand">Grotti</p>
+            <h3>Cheetah Classic</h3>
+            <div class="car-meta">
+              <div>
+                <span>Prix</span>
+                <strong>$865,000</strong>
+              </div>
+              <div class="vote-count">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                <strong>42</strong>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="button ghost" type="button" data-action="details">D&eacute;tails</button>
+              <button class="button secondary" type="button" data-action="vote"><span class="material-symbols-outlined" aria-hidden="true">thumb_up</span>Voter</button>
+              <button class="button ghost" type="button" data-action="edit">Modifier</button>
+              <button class="button danger" type="button" data-action="delete">Supprimer</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-car-card data-name="Vigero ZX" data-brand="Declasse" data-price="$1,947,000" data-speed="115 mph" data-votes="128">
+          <div class="car-image">
+            <img src="assets/banshee.jpg" alt="Vigero ZX">
+            <span class="speed-chip"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>115 mph</span>
+          </div>
+          <div class="car-body">
+            <p class="car-brand">Declasse</p>
+            <h3>Vigero ZX</h3>
+            <div class="car-meta">
+              <div>
+                <span>Prix</span>
+                <strong>$1,947,000</strong>
+              </div>
+              <div class="vote-count">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                <strong>128</strong>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="button ghost" type="button" data-action="details">D&eacute;tails</button>
+              <button class="button secondary" type="button" data-action="vote"><span class="material-symbols-outlined" aria-hidden="true">thumb_up</span>Voter</button>
+              <button class="button ghost" type="button" data-action="edit">Modifier</button>
+              <button class="button danger" type="button" data-action="delete">Supprimer</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-car-card data-name="Ignus" data-brand="Pegassi" data-price="$2,765,000" data-speed="132 mph" data-votes="256">
+          <div class="car-image">
+            <img src="assets/turismo-r.jpg" alt="Ignus">
+            <span class="speed-chip"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>132 mph</span>
+          </div>
+          <div class="car-body">
+            <p class="car-brand">Pegassi</p>
+            <h3>Ignus</h3>
+            <div class="car-meta">
+              <div>
+                <span>Prix</span>
+                <strong>$2,765,000</strong>
+              </div>
+              <div class="vote-count">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                <strong>256</strong>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="button ghost" type="button" data-action="details">D&eacute;tails</button>
+              <button class="button secondary" type="button" data-action="vote"><span class="material-symbols-outlined" aria-hidden="true">thumb_up</span>Voter</button>
+              <button class="button ghost" type="button" data-action="edit">Modifier</button>
+              <button class="button danger" type="button" data-action="delete">Supprimer</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-car-card data-name="Elegy Retro" data-brand="Annis" data-price="$904,000" data-speed="118 mph" data-votes="312">
+          <div class="car-image">
+            <img src="assets/comet.jpg" alt="Elegy Retro">
+            <span class="speed-chip"><span class="material-symbols-outlined" aria-hidden="true">bolt</span>118 mph</span>
+          </div>
+          <div class="car-body">
+            <p class="car-brand">Annis</p>
+            <h3>Elegy Retro</h3>
+            <div class="car-meta">
+              <div>
+                <span>Prix</span>
+                <strong>$904,000</strong>
+              </div>
+              <div class="vote-count">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                <strong>312</strong>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="button ghost" type="button" data-action="details">D&eacute;tails</button>
+              <button class="button secondary" type="button" data-action="vote"><span class="material-symbols-outlined" aria-hidden="true">thumb_up</span>Voter</button>
+              <button class="button ghost" type="button" data-action="edit">Modifier</button>
+              <button class="button danger" type="button" data-action="delete">Supprimer</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="form-section is-hidden" id="form-section" aria-labelledby="form-title">
+      <div class="form-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">Gestion</p>
+            <h2 id="form-title">Ajouter ou modifier une voiture</h2>
+          </div>
+          <p class="section-note">Le formulaire est pr&ecirc;t pour les requ&ecirc;tes CRUD de la prochaine &eacute;tape.</p>
+        </div>
+
+        <form class="car-form" id="car-form">
+          <input type="hidden" id="car-id" name="id">
+          <div class="field-grid">
+            <label>
+              <span>Nom</span>
+              <input id="car-name" name="name" type="text" autocomplete="off" required>
+            </label>
+            <label>
+              <span>Marque</span>
+              <input id="car-brand" name="brand" type="text" autocomplete="off" required>
+            </label>
+            <label>
+              <span>Prix</span>
+              <input id="car-price" name="price" type="number" min="0" step="1" required>
+            </label>
+            <label>
+              <span>Vitesse</span>
+              <input id="car-speed" name="speed" type="number" min="0" step="1" required>
+            </label>
+            <label class="wide">
+              <span>Description</span>
+              <textarea id="car-description" name="description" rows="4" required></textarea>
+            </label>
+            <label class="wide">
+              <span>Image</span>
+              <input id="car-image" name="image_url" type="text" placeholder="assets/logo.png">
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Ajouter une voiture</button>
+            <button class="button ghost" type="button" data-cancel-edit>Annuler la modification</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <section class="modal is-hidden" id="car-details" aria-labelledby="details-title" aria-modal="true" role="dialog">
+    <div class="modal-backdrop" data-close-details></div>
+    <article class="details-panel">
+      <button class="icon-button close-button" type="button" data-close-details aria-label="Fermer">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <div class="details-image">
+        <img id="details-image" src="assets/zentorno.jpg" alt="">
+      </div>
+      <div class="details-content">
+        <p class="car-brand" id="details-brand">Grotti</p>
+        <h2 id="details-title">Cheetah Classic</h2>
+        <p id="details-description">Un v&eacute;hicule sportif pr&ecirc;t pour la fiche d&eacute;taill&eacute;e et la connexion au backend.</p>
+        <div class="details-stats">
+          <span id="details-price">$865,000</span>
+          <span id="details-speed">120 mph</span>
+          <span id="details-votes">42 votes</span>
+        </div>
+        <button class="button primary full" type="button" data-action="vote">Voter pour ce v&eacute;hicule</button>
+      </div>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <span>Santos Car</span>
+    <span>Projet ECF - catalogue de voitures</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

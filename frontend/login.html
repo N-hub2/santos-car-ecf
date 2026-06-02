@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santos Car - Connexion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page" data-page="login">
+  <main class="auth-shell">
+    <a class="brand auth-brand" href="index.html" aria-label="Santos Car - Accueil">
+      <img class="brand-logo large" src="assets/logo.png" alt="Santos Car">
+      <span class="brand-text">Santos Car</span>
+    </a>
+    <p class="auth-subtitle">Plateforme de gestion de flotte virtuelle</p>
+
+    <section class="auth-panel" aria-labelledby="auth-title">
+      <div class="auth-accent" aria-hidden="true"></div>
+      <div class="auth-tabs" role="tablist" aria-label="Authentification">
+        <button class="auth-tab active" id="login-tab" type="button" data-auth-tab="login" role="tab" aria-selected="true" aria-controls="login-form">Connexion</button>
+        <button class="auth-tab" id="register-tab" type="button" data-auth-tab="register" role="tab" aria-selected="false" aria-controls="register-form">Inscription</button>
+      </div>
+
+      <div class="auth-content">
+        <p class="message" id="message-box" hidden></p>
+
+        <form class="auth-form" id="login-form" data-auth-form="login" aria-labelledby="auth-title">
+          <h1 id="auth-title">Connexion</h1>
+          <label>
+            <span>Username ou email</span>
+            <span class="input-shell">
+              <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              <input id="login-identifier" name="identifier" type="text" autocomplete="username" placeholder="pilote@santos-car.fr" required>
+            </span>
+          </label>
+          <label>
+            <span>Mot de passe</span>
+            <span class="input-shell">
+              <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Votre mot de passe" required>
+            </span>
+          </label>
+          <button class="button primary full" type="submit">
+            <span>Se connecter</span>
+            <span class="material-symbols-outlined" aria-hidden="true">login</span>
+          </button>
+        </form>
+
+        <form class="auth-form is-hidden" id="register-form" data-auth-form="register" aria-labelledby="register-title">
+          <h1 id="register-title">Inscription</h1>
+          <label>
+            <span>Username</span>
+            <span class="input-shell">
+              <span class="material-symbols-outlined" aria-hidden="true">sports_esports</span>
+              <input id="register-username" name="username" type="text" autocomplete="username" placeholder="pilote-santos" required>
+            </span>
+          </label>
+          <label>
+            <span>Email</span>
+            <span class="input-shell">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <input id="register-email" name="email" type="email" autocomplete="email" placeholder="pilote@santos-car.fr" required>
+            </span>
+          </label>
+          <label>
+            <span>Mot de passe</span>
+            <span class="input-shell">
+              <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+              <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Votre mot de passe" required>
+            </span>
+          </label>
+          <button class="button primary full" type="submit">
+            <span>S'inscrire</span>
+            <span class="material-symbols-outlined" aria-hidden="true">person_add</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <a class="back-link" href="index.html">
+      <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+      Retour &agrave; l'accueil
+    </a>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
