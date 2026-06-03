@@ -12,6 +12,18 @@ npm install
 
 Créer un fichier `.env` à partir de `.env.example`.
 
+```bash
+cp .env.example .env
+```
+
+Sur Windows :
+
+```bat
+copy .env.example .env
+```
+
+Exemple de configuration :
+
 ```env
 PORT=3000
 DB_HOST=127.0.0.1
@@ -22,11 +34,11 @@ DB_NAME=gta_cars
 JWT_SECRET=change_this_secret
 ```
 
-Si WAMP utilise le port MySQL `3307`, modifier `DB_PORT=3307` dans `.env`.
+Le fichier `.env` ne doit pas être commit.
 
 ## Base de données
 
-Importer `schema.sql` dans MySQL ou phpMyAdmin.
+Importer `schema.sql` dans MySQL, MariaDB ou phpMyAdmin.
 
 Le script crée :
 
@@ -34,6 +46,7 @@ Le script crée :
 - la table `users`
 - la table `cars`
 - la table `car_votes`
+- des voitures de démonstration
 
 La table `car_votes` contient une contrainte `UNIQUE(user_id, car_id)` pour empêcher un vote en double.
 
@@ -43,11 +56,43 @@ La table `car_votes` contient une contrainte `UNIQUE(user_id, car_id)` pour emp�
 npm start
 ```
 
-## Test
+L'API démarre par défaut sur `http://localhost:3000`.
 
-Vérifier l'API avec :
+## Routes
+
+### Auth
+
+- `POST /register`
+- `POST /login`
+
+### Cars
+
+- `GET /cars`
+- `GET /cars/:id`
+- `POST /cars`
+- `PUT /cars/:id`
+- `DELETE /cars/:id`
+
+### Votes
+
+- `POST /cars/:id/vote`
+- `GET /cars/:id/votes`
+
+Les routes protégées utilisent l'en-tête :
+
+```http
+Authorization: Bearer TOKEN
+```
+
+## Test de connexion
 
 ```bash
+npm run test:db
+```
+
+## Test de l'API
+
+```http
 GET http://localhost:3000/health
 ```
 
