@@ -7,10 +7,16 @@ function normalizeCar(car) {
     return null;
   }
 
-  return {
+  const normalizedCar = {
     ...car,
     price: car.price === null ? null : Number(car.price)
   };
+
+  if (Object.prototype.hasOwnProperty.call(car, "votes")) {
+    normalizedCar.votes = car.votes === null ? 0 : Number(car.votes);
+  }
+
+  return normalizedCar;
 }
 
 function hasValue(value) {
@@ -51,7 +57,25 @@ async function findCarById(id) {
 
 async function getCars(req, res) {
   try {
-    const [cars] = await db.query(`SELECT ${CAR_FIELDS} FROM cars ORDER BY id ASC`);
+    const [cars] = await db.query(`
+      SELECT
+        c.id,
+        c.name,
+        c.brand,
+        c.price,
+        c.speed,
+        c.description,
+        c.image_url,
+        c.created_at,
+        COALESCE(v.votes, 0) AS votes
+      FROM cars c
+      LEFT JOIN (
+        SELECT car_id, COUNT(*) AS votes
+        FROM car_votes
+        GROUP BY car_id
+      ) v ON v.car_id = c.id
+      ORDER BY c.id ASC
+    `);
     return res.json({ cars: cars.map(normalizeCar) });
   } catch (error) {
     return res.status(500).json({ message: "Erreur serveur" });

@@ -129,7 +129,7 @@ async function handleStaticAction(button) {
   }
 
   if (action === "vote") {
-    await handleVote(card);
+    await handleVote(card, button);
     return;
   }
 
@@ -317,7 +317,7 @@ async function handleDeleteCar(card) {
   }
 }
 
-async function handleVote(card) {
+async function handleVote(card, button) {
   const token = getToken();
   const carId = card?.dataset.id;
 
@@ -343,6 +343,7 @@ async function handleVote(card) {
     if (response.status === 201) {
       showMessage("Vote enregistr\u00e9 avec succ\u00e8s.", "success");
       await refreshCarVotes(card);
+      disableVoteButton(button);
       return;
     }
 
@@ -354,6 +355,7 @@ async function handleVote(card) {
     if (response.status === 409) {
       showMessage("Vous avez d\u00e9j\u00e0 vot\u00e9 pour cette voiture.", "warning");
       await refreshCarVotes(card);
+      disableVoteButton(button);
       return;
     }
 
@@ -366,6 +368,16 @@ async function handleVote(card) {
   } catch (error) {
     showMessage("Une erreur est survenue.", "error");
   }
+}
+
+function disableVoteButton(button) {
+  if (!button) {
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = "D\u00e9j\u00e0 vot\u00e9";
+  button.setAttribute("aria-disabled", "true");
 }
 
 async function refreshCarVotes(card) {
