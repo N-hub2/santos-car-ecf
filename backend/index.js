@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/health", (req, res) => {
-  res.json({ message: "Santos Car API is running" });
+  res.json({ message: "L'API Santos Car fonctionne" });
 });
 
 app.use(authRoutes);

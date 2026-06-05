@@ -100,6 +100,6 @@ Réponse attendue :
 
 ```json
 {
-  "message": "Santos Car API is running"
+  "message": "L'API Santos Car fonctionne"
 }
 ```

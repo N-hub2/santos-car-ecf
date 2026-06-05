@@ -425,7 +425,7 @@ async function loadCars() {
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
-      throw new Error("Cars request failed");
+      throw new Error("\u00c9chec de la requ\u00eate des voitures");
     }
 
     const cars = Array.isArray(data.cars) ? data.cars : [];
@@ -458,7 +458,7 @@ async function getCarVotes(carId, options = {}) {
 
     if (!response.ok) {
       if (options.throwOnError) {
-        throw new Error("Votes request failed");
+        throw new Error("\u00c9chec de la requ\u00eate des votes");
       }
 
       return 0;
